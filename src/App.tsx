@@ -9,7 +9,7 @@ import {
   X,
 } from "lucide-react";
 import About from "./pages/About";
-import Services from "./pages/Services";
+import servi from "./pages/servi";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Home() {
@@ -211,10 +211,10 @@ function App() {
                   About Us
                 </Link>
                 <Link
-                  to="/service"
+                  to="/servi"
                   className="text-sage-200 hover:text-emerald-300 transition-colors"
                 >
-                  Services
+                  servi
                 </Link>
                 <Link
                   to="/blog"
@@ -269,10 +269,10 @@ function App() {
                     About Us
                   </Link>
                   <Link
-                    to="/services"
+                    to="/servi"
                     className="text-sage-200 hover:text-emerald-300 transition-colors"
                   >
-                    Services
+                    servi
                   </Link>
                   <Link
                     to="/blog"
@@ -304,7 +304,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/servi" element={<servi />} />
         </Routes>
 
         {/* Footer */}
@@ -342,7 +342,7 @@ function App() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3">Services</h3>
+                <h3 className="text-lg font-semibold mb-3">servi</h3>
                 <ul className="space-y-2">
                   <li>
                     <a href="/ayurveda" className="hover:text-sage-300">
