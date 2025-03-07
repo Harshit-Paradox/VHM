@@ -102,20 +102,6 @@ function Home() {
           <div className="lotus-divider mt-12" />
         </div>
 
-        {/* Introduction */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl font-['Cormorant_Garamond'] mb-8 text-sage-900">
-            Ancient Wisdom for Modern Wellness
-          </h2>
-          <p className="text-xl text-sage-800 leading-relaxed">
-            At Vedic Healing & Wellness, we bring the timeless wisdom of
-            Ayurveda to modern life. As a Sri Sri Tattva franchise, we offer
-            holistic treatments that harmonize your body, mind, and spirit
-            through traditional practices passed down through generations.
-          </p>
-          <div className="lotus-divider mt-12" />
-        </div>
-
         {/* Enhanced Testimonials Section */}
         <div className="bg-gradient-to-br from-sage-50 to-emerald-50 rounded-3xl p-12 shadow-sm border border-sage-100 mb-20">
           <h2 className="text-4xl font-['Cormorant_Garamond'] mb-12 text-center text-sage-900">
