@@ -30,8 +30,8 @@ export default function ReviewModal({
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        "service_nsd07ai", // Replace with your EmailJS service ID
+        "template_2a16o7h", // Replace with your EmailJS template ID
         {
           from_name: name,
           from_email: email,
@@ -40,20 +40,21 @@ export default function ReviewModal({
           review: review,
           to_name: "Vedic Healing & Wellness",
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        "jEUcXGKI-ecmgOzti" // Replace with your EmailJS public key
       );
 
       setSubmitStatus("success");
-      setTimeout(() => {
-        onClose();
-        // Reset form
-        setName("");
-        setEmail("");
-        setTreatment("");
-        setRating(5);
-        setReview("");
-        setSubmitStatus("idle");
-      }, 2000);
+
+      // Close the modal immediately
+      onClose();
+
+      // Reset form fields
+      setName("");
+      setEmail("");
+      setTreatment("");
+      setRating(5);
+      setReview("");
+      setSubmitStatus("idle");
     } catch (error) {
       setSubmitStatus("error");
     } finally {

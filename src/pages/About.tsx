@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -29,7 +30,7 @@ function About() {
               <img
                 src="Ceo.png"
                 alt="Swathishree Yanamandra"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-[0.75]"
               />
             </div>
             <div>
@@ -44,7 +45,11 @@ function About() {
                 Instructor, and Psychotherapist. With extensive training from
                 the Art of Living Foundation, she combines Ayurveda, psychology,
                 and holistic healing to bring transformational wellness to her
-                clients. She is also an instructor with the Art of Living
+                clients. She has a masters degree in Psychology from Bombay
+                University and is a licensed Massage & Bodywork therapist. She
+                has undergone training from Sri Sri Tattva and the Art of Living
+                Foundation in Ayurveda treatments and basic/advanced Marma
+                healing. She is also an instructor with the Art of Living
                 Foundation and teaches the SKY breath meditation.
               </p>
             </div>
@@ -69,17 +74,18 @@ function About() {
                 Sahaj Samadhi, Sri Sri Yoga, Sleep & Anxiety Protocol and Silent
                 Retreats. He discovered SKY during his IIT Bombay days and has
                 been practicing for 30 years. Passionate about community
-                wellness, he leads meditation and breathing awareness programs.
-                Shravan holds a Master of Science from Carnegie Mellon
-                University and works in Data Strategy at a New York investment
-                bank.
+                wellness, he leads meditation , breathwork, yoga and silence
+                programs. He has undergone Marma healing training from the Art
+                of Living Foundation. Shravan holds a Master of Science from
+                Carnegie Mellon University and works in Data Strategy at a New
+                York investment bank.
               </p>
             </div>
             <div className="aspect-square rounded-2xl overflow-hidden order-1 md:order-2">
               <img
                 src="Shravan.png"
                 alt="Shravan Bharathula"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-[0.75]"
               />
             </div>
           </div>
@@ -104,9 +110,11 @@ function About() {
             <p className="text-xl text-sage-700">📍 Location: Edison, NJ</p>
             <p className="text-xl text-sage-700">📞 Contact: 732-476-4754</p>
           </div>
-          <button className="bg-emerald-700 hover:bg-emerald-800 text-sage-50 px-8 py-4 rounded-full text-lg font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-600/30">
-            Book an Appointment Today <ArrowRight className="w-5 h-5" />
-          </button>
+          <Link to="https://calendly.com/vedichealingwellness">
+            <button className="bg-emerald-700 hover:bg-emerald-800 text-sage-50 px-8 py-4 rounded-full text-lg font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-600/30">
+              Book an Appointment Today <ArrowRight className="w-5 h-5" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

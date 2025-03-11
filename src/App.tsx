@@ -11,6 +11,8 @@ import {
 import About from "./pages/About";
 import Services from "./pages/Services";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import Reviews from "./pages/Reviews";
+import Contact from "./pages/Contact";
 
 function Home() {
   return (
@@ -47,9 +49,11 @@ function Home() {
             or overall well-being, our therapies are designed to nurture your
             health naturally.
           </p>
-          <button className="bg-emerald-700 hover:bg-emerald-800 text-sage-50 px-10 py-5 rounded-full text-lg font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-600/30">
-            Begin Your Journey <ArrowRight className="w-5 h-5" />
-          </button>
+          <Link to="/services">
+            <button className="bg-emerald-700 hover:bg-emerald-800 text-sage-50 px-10 py-5 rounded-full text-lg font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-600/30">
+              Begin Your Journey <ArrowRight className="w-5 h-5" />
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -157,14 +161,14 @@ function Home() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <Link
-              to="/reviews"
+              to="/review"
               className="inline-flex items-center gap-2 text-emerald-700 hover:text-emerald-800 text-lg font-medium"
             >
               Read More Reviews <ArrowRight className="w-5 h-5" />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* CTA Section */}
@@ -172,10 +176,12 @@ function Home() {
           <h2 className="text-4xl font-['Cormorant_Garamond'] mb-8 text-sage-900">
             Begin Your Path to Wellness
           </h2>
-          <button className="bg-emerald-700 hover:bg-emerald-800 text-sage-50 px-10 py-5 rounded-full text-xl font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-600/30">
-            <Calendar className="w-6 h-6" />
-            Schedule Your Sacred Journey
-          </button>
+          <Link to="https://calendly.com/vedichealingwellness">
+            <button className="bg-emerald-700 hover:bg-emerald-800 text-sage-50 px-10 py-5 rounded-full text-xl font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-600/30">
+              <Calendar className="w-6 h-6" />
+              Schedule Your Sacred Journey
+            </button>
+          </Link>
         </div>
       </div>
     </>
@@ -211,7 +217,7 @@ function App() {
                   About Us
                 </Link>
                 <Link
-                  to="/"
+                  to="/services"
                   className="text-sage-200 hover:text-emerald-300 transition-colors"
                 >
                   Services
@@ -223,7 +229,7 @@ function App() {
                   Blog
                 </Link>
                 <Link
-                  to="/reviews"
+                  to="/review"
                   className="text-sage-200 hover:text-emerald-300 transition-colors"
                 >
                   Reviews
@@ -238,9 +244,12 @@ function App() {
 
               {/* Book Now Button */}
               <div className="hidden md:block">
-                <button className="bg-emerald-700 hover:bg-emerald-800 px-6 py-2 rounded-full text-sm font-medium transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2 border border-emerald-600/30">
+                <Link
+                  to="https://calendly.com/vedichealingwellness"
+                  className="bg-emerald-700 hover:bg-emerald-800 px-6 py-2 rounded-full text-sm font-medium transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2 border border-emerald-600/30"
+                >
                   Book Now <ArrowRight className="w-4 h-4" />
-                </button>
+                </Link>
               </div>
 
               {/* Mobile Menu Button */}
@@ -269,7 +278,7 @@ function App() {
                     About Us
                   </Link>
                   <Link
-                    to="/"
+                    to="/services"
                     className="text-sage-200 hover:text-emerald-300 transition-colors"
                   >
                     Services
@@ -281,7 +290,7 @@ function App() {
                     Blog
                   </Link>
                   <Link
-                    to="/reviews"
+                    to="/review"
                     className="text-sage-200 hover:text-emerald-300 transition-colors"
                   >
                     Reviews
@@ -292,9 +301,12 @@ function App() {
                   >
                     Contact
                   </Link>
-                  <button className="bg-emerald-700 hover:bg-emerald-800 px-6 py-2 rounded-full text-sm font-medium transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2 border border-emerald-600/30 w-full justify-center mt-2">
+                  <Link
+                    to="https://calendly.com/vedichealingwellness"
+                    className="bg-emerald-700 hover:bg-emerald-800 px-6 py-2 rounded-full text-sm font-medium transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2 border border-emerald-600/30 w-full justify-center mt-2"
+                  >
                     Book Now <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             )}
@@ -304,7 +316,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/Services" element={<Services />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         {/* Footer */}

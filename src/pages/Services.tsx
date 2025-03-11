@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, Waves, Sun, Flame, Flower2, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -52,9 +53,11 @@ function ServiceCard({
           <span className="mr-2">⌛</span>
           {duration}
         </p>
-        <button className="bg-emerald-700/90 hover:bg-emerald-800 text-sage-50 px-8 py-3 rounded-full text-base font-medium transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2 border border-emerald-600/30">
-          Book Now <ArrowRight className="w-5 h-5" />
-        </button>
+        <Link to="https://calendly.com/vedichealingwellness">
+          <button className="bg-emerald-700/90 hover:bg-emerald-800 text-sage-50 px-8 py-3 rounded-full text-base font-medium transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2 border border-emerald-600/30">
+            Book Now <ArrowRight className="w-5 h-5" />
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -135,7 +138,11 @@ function Services() {
       <div className="relative py-32 bg-gradient-to-br from-sage-900 via-emerald-900 to-sage-900">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay" />
         <div className="max-w-6xl mx-auto px-4 text-center relative">
-          <Flower2 className="w-16 h-16 mx-auto mb-8 text-emerald-400 animate-spin-slow" />
+          <img
+            src="/VHW.png"
+            alt="logo"
+            className="w-20 h-20 mx-auto mb-8 animate-spin-slow"
+          />
           <h1 className="text-5xl md:text-7xl font-['Cormorant_Garamond'] text-sage-50 mb-6">
             Sacred Healing Therapies
           </h1>
@@ -159,10 +166,12 @@ function Services() {
           <h2 className="text-4xl font-['Cormorant_Garamond'] mb-8 text-sage-900">
             Begin Your Healing Journey Today
           </h2>
-          <button className="bg-emerald-700/90 hover:bg-emerald-800 text-sage-50 px-12 py-6 rounded-full text-xl font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-3 mx-auto border border-emerald-600/30 group">
-            Schedule Your Sacred Treatment
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <Link to="https://calendly.com/vedichealingwellness">
+            <button className="bg-emerald-700/90 hover:bg-emerald-800 text-sage-50 px-12 py-6 rounded-full text-xl font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-3 mx-auto border border-emerald-600/30 group">
+              Schedule Your Sacred Treatment
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

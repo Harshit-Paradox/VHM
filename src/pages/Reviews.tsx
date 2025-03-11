@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Star, MessageSquare, ArrowRight, Quote } from "lucide-react";
 import ReviewModal from "../components/ReviewModal";
+import toast from "react-hot-toast";
 
 interface Review {
   id: number;
@@ -15,6 +16,11 @@ interface Review {
 function Reviews() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    toast.success("Thanks for reviewing us! 🌿");
+  };
 
   const reviews: Review[] = [
     {
@@ -163,7 +169,7 @@ function Reviews() {
 
       <ReviewModal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={handleCloseModal}
         treatments={treatments}
       />
     </div>
