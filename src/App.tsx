@@ -1,16 +1,14 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {
-  Star,
-  Calendar,
-  CheckCircle2,
-  ArrowRight,
-  Menu,
-  X,
-} from "lucide-react";
+import { Star, CheckCircle2, ArrowRight, Menu, X } from "lucide-react";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
 
@@ -171,17 +169,38 @@ function Home() {
           </div> */}
         </div>
 
+        {/* Sri Sri Tattva Section */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="lotus-divider mb-12" />
+          <div className="bg-gradient-to-br from-sage-50 to-emerald-50 rounded-3xl p-8 shadow-sm border border-sage-100">
+            <h3 className="text-2xl font-['Cormorant_Garamond'] text-sage-900 mb-4">
+              Sri Sri Tattva Franchise
+            </h3>
+            <p className="text-xl text-sage-700 mb-8">
+              We are proud to be a Sri Sri Tattva Franchise, ensuring that every
+              treatment follows the highest standards of Ayurvedic tradition and
+              expertise.
+            </p>
+          </div>
+        </div>
+
         {/* CTA Section */}
-        <div className="text-center mt-20">
-          <h2 className="text-4xl font-['Cormorant_Garamond'] mb-8 text-sage-900">
-            Begin Your Path to Wellness
-          </h2>
-          <Link to="https://calendly.com/vedichealingwellness">
-            <button className="bg-emerald-700 hover:bg-emerald-800 text-sage-50 px-10 py-5 rounded-full text-xl font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-600/30">
-              <Calendar className="w-6 h-6" />
-              Schedule Your Sacred Journey
-            </button>
-          </Link>
+        <div className="bg-gradient-to-br from-sage-900 to-emerald-900 rounded-3xl p-12 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+          <div className="relative">
+            <h2 className="text-3xl font-['Cormorant_Garamond'] text-sage-50 mb-8">
+              Begin Your Wellness Journey
+            </h2>
+            <div className="space-y-4 mb-8">
+              <p className="text-xl text-sage-200">📍 Edison, NJ</p>
+              <p className="text-xl text-sage-200">📞 732-476-4754</p>
+            </div>
+            <Link to="https://calendly.com/vedichealingwellness">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-sage-50 px-8 py-4 rounded-full text-lg font-medium transition-all hover:shadow-xl hover:scale-105 flex items-center gap-2 mx-auto border border-emerald-500/30">
+                Book an Appointment Today <ArrowRight className="w-5 h-5" />
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
@@ -322,96 +341,176 @@ function App() {
         </Routes>
 
         {/* Footer */}
-        {/* Footer */}
-        <footer className="bg-sage-900 text-sage-100 py-12 mt-20">
-          <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-            {/* Left Section - Logo & Name */}
-            <div className="flex flex-col items-center md:items-start">
-              <img src="VHW.png" alt="Logo" className="w-20 h-20 mb-3" />
-              <h2 className="text-xl font-['Cormorant_Garamond'] font-semibold">
-                Vedic Healing & Wellness
-              </h2>
-            </div>
+        {/* Updated Footer */}
+        <footer className="bg-sage-900 text-gray-100">
+          <div className="max-w-6xl mx-auto">
+            {/* Main Footer Content */}
+            <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Brand Section */}
+              <div className="space-y-4 text-lg font-semibold mb-4 text-sage-50">
+                <div className="flex items-center gap-3">
+                  <div className="w-20 h-24 text-emerald-400">
+                    <img
+                      src="VHW.png"
+                      alt="Logo"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-4 text-sage-50">
+                    Vedic Healing & Wellness
+                  </h3>
+                </div>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Authentic Ayurvedic healing and wellness services in New
+                  Jersey. Experience traditional therapies for modern
+                  well-being.
+                </p>
+              </div>
 
-            {/* Middle Section - Navigation */}
-            <div className="flex flex-col md:flex-row justify-center gap-8">
+              {/* Quick Links */}
               <div>
-                <h3 className="text-lg font-semibold mb-3">About</h3>
+                <h3 className="text-lg font-semibold mb-4 text-sage-50">
+                  Quick Links
+                </h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/about" className="hover:text-sage-300">
-                      Who We Are
-                    </a>
+                    <Link
+                      to="/about"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      About Us
+                    </Link>
                   </li>
                   <li>
-                    <a href="/team" className="hover:text-sage-300">
-                      Our Team
-                    </a>
+                    <Link
+                      to="/services"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      Our Services
+                    </Link>
                   </li>
                   <li>
-                    <a href="/contact" className="hover:text-sage-300">
+                    <Link
+                      to="/reviews"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      Reviews
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/contact"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
+
+              {/* Services */}
               <div>
-                <h3 className="text-lg font-semibold mb-3">Services</h3>
+                <h3 className="text-lg font-semibold mb-4 text-sage-50">
+                  Our Services
+                </h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/ayurveda" className="hover:text-sage-300">
-                      Ayurveda Therapy
-                    </a>
+                    <Link
+                      to="/services"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      Abhyanga Massage
+                    </Link>
                   </li>
                   <li>
-                    <a href="/yoga" className="hover:text-sage-300">
-                      Yoga & Meditation
-                    </a>
+                    <Link
+                      to="/services"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      Shirodhara Therapy
+                    </Link>
                   </li>
                   <li>
-                    <a href="/herbal" className="hover:text-sage-300">
-                      Herbal Remedies
-                    </a>
+                    <Link
+                      to="/services"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      Ayurvedic Consultation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/services"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      Specialized Treatments
+                    </Link>
                   </li>
                 </ul>
               </div>
-            </div>
 
-            {/* Right Section - Social Links */}
-            <div className="flex flex-col items-center md:items-end">
-              <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
-              <div className="flex gap-4">
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sage-100 text-xl hover:text-sage-300 transition"
-                >
-                  <FaFacebookF />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sage-100 text-xl hover:text-sage-300 transition"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sage-100 text-xl hover:text-sage-300 transition"
-                >
-                  <FaTwitter />
-                </a>
+              {/* Contact Info */}
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-sage-50">
+                  Get in Touch
+                </h3>
+                <div className="space-y-4">
+                  <p className="text-sage-300">
+                    79 Revere Blvd
+                    <br />
+                    Edison, NJ
+                  </p>
+                  <p className="text-sage-300">
+                    <a
+                      href="tel:732-476-4754"
+                      className="hover:text-emerald-400 transition-colors"
+                    >
+                      732-476-4754
+                    </a>
+                  </p>
+                  <div className="flex gap-4">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      <FaFacebookF className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      <FaInstagram className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      <FaTwitter className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sage-300 hover:text-emerald-400 transition-colors"
+                    >
+                      <FaLinkedinIn className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Bottom Copyright */}
-          <div className="text-center mt-8 text-sm opacity-75">
-            © 2025 Vedic Healing & Wellness. All rights reserved.
+            {/* Bottom Bar */}
+            <div className="border-t border-sage-800 py-6 text-center text-sage-400 text-sm">
+              © {new Date().getFullYear()} Vedic Healing & Wellness. All rights
+              reserved.
+            </div>
           </div>
         </footer>
       </div>
