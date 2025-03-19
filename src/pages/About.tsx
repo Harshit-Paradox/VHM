@@ -5,9 +5,14 @@ function About() {
   return (
     <div className="pt-20 bg-sage-50">
       {/* Hero Section */}
-      <div className="relative py-24 bg-gradient-to-br from-sage-900 to-emerald-900">
+      <div className="relative py-12 bg-gradient-to-br from-sage-900 via-emerald-900 to-sage-900 flex justify-center text-center">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay" />
         <div className="max-w-6xl mx-auto px-4">
+          <img
+            src="/VHW.png"
+            alt="logo"
+            className="w-20 h-20 mx-auto mb-8 animate-spin-slow"
+          />
           <h1 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-sage-50 mb-6">
             Healing Through Ayurveda & Wellness
           </h1>

@@ -248,7 +248,7 @@ function App() {
                   Blog
                 </Link>
                 <Link
-                  to="/review"
+                  to="/reviews"
                   className="text-sage-200 hover:text-emerald-300 transition-colors"
                 >
                   Reviews
@@ -309,7 +309,7 @@ function App() {
                     Blog
                   </Link>
                   <Link
-                    to="/review"
+                    to="/reviews"
                     className="text-sage-200 hover:text-emerald-300 transition-colors"
                   >
                     Reviews
